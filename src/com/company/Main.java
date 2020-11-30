@@ -3,11 +3,31 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	    Scalar scalarOne = new Scalar(1);
-	    Scalar scalarTwo = new Scalar(2);
-
-	    Add add = new Add(scalarOne, scalarTwo);
-	    System.out.println(add.execute());
-	    System.out.println(add);
+    	Exercice2();
     }
+
+    public static void Exercice2()
+	{
+		Scalar scalarThree = new Scalar(3);
+		Scalar scalarFour = new Scalar(4);
+		Add firstAdd = new Add(scalarThree, scalarFour);
+
+		Scalar scalarOne = new Scalar(1);
+		Scalar scalarTwo = new Scalar(2);
+		Add secondAdd = new Add(scalarOne, scalarTwo);
+
+		Add finalAdd = new Add(secondAdd, firstAdd);
+		System.out.println(finalAdd);
+		System.out.println(finalAdd.execute());
+	}
+
+    public static void Exercice1()
+	{
+		Scalar scalarOne = new Scalar(1);
+		Scalar scalarTwo = new Scalar(2);
+
+		Add add = new Add(scalarOne, scalarTwo);
+		System.out.println(add.execute());
+		System.out.println(add);
+	}
 }

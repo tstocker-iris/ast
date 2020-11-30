@@ -1,10 +1,10 @@
 package com.company;
 
-public class Add {
-    private Scalar left;
-    private Scalar right;
+public class Add implements Node {
+    private Node left;
+    private Node right;
 
-    public Add(Scalar pLeft, Scalar pRight)
+    public Add(Node pLeft, Node pRight)
     {
         left = pLeft;
         right = pRight;
@@ -12,7 +12,7 @@ public class Add {
 
     public int execute()
     {
-        return this.left.get() + this.right.get();
+        return this.left.execute() + this.right.execute();
     }
 
     public String toString()

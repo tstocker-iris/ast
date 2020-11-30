@@ -1,6 +1,6 @@
 package com.company;
 
-public class Scalar {
+public class Scalar implements Node {
     private int value;
 
     public Scalar(int pValue)
@@ -16,5 +16,9 @@ public class Scalar {
     public String toString()
     {
         return Integer.toString(this.value);
+    }
+
+    public int execute() {
+        return this.value;
     }
 }
