@@ -1,18 +1,19 @@
 package com.company;
 
-public class Add extends Operation {
-    public Add(Node... ops)
+public class Neg extends Operation {
+
+    public Neg(Node... ops)
     {
         super(ops);
     }
 
-    public int execute()
-    {
+    @Override
+    public int execute() {
         int resultat = 0;
 
         for (int i = 0; i < nbOps(); i++)
         {
-            resultat += op(i).execute();
+            resultat -= op(i).execute();
         }
 
         return resultat;
@@ -20,6 +21,6 @@ public class Add extends Operation {
 
     @Override
     public String opString() {
-        return "+";
+        return "-";
     }
 }
