@@ -4,8 +4,23 @@ public class Main {
 
     public static void main(String[] args) {
     	//Exercice2();
-		Exercice3();
+		//Exercice3();
+		Exercice4();
     }
+
+    public static void Exercice4()
+	{
+		Scalar scalarTwentyTwo = new Scalar(22);
+		Variable varX = new Variable("x");
+		Set set = new Set(varX, scalarTwentyTwo);
+		System.out.println(set);
+		System.out.println(set.execute());
+
+		Scalar scalarTwenty = new Scalar(20);
+		Add lAdd = new Add(varX, scalarTwenty);
+		System.out.println(lAdd);
+		System.out.println(lAdd.execute());
+	}
 
     public static void Exercice3()
 	{

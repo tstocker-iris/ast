@@ -12,6 +12,10 @@ public class Scalar implements Node {
     {
         return this.value;
     }
+    public void set(int pValue)
+    {
+        value = pValue;
+    }
 
     public String toString()
     {
